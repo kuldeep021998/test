@@ -6,7 +6,7 @@ import imgs from '../assets/Monkeyface.png'
 export default function Home() {
     return (
         <View style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center' }}>
-            <Image source={require("../assets/Monkeyface.png")} style={{  width: 50, height: 50 }} />
+            <Image source={require("../assets/Monkeyface.png")} style={{  width: 50, height: 50 }}/>
         </View>
     )
 }
