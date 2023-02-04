@@ -6,7 +6,7 @@ import { Text } from "react-native";
 
 const { width, height } = Dimensions.get('window');
 
-export default function Login({navigation}) {
+export default function Login({ navigation }) {
     const [mobileEmail, setMobileEmail] = useState('');
     const [password, setPassword] = useState('');
     const [inputs, setInputs] = useState({ mobileEmail: '', password: '' });
@@ -59,7 +59,7 @@ export default function Login({navigation}) {
             <AppButton style={{ marginTop: 10 }} onPress={handleClick} buttonText={'Login with Google'} bgColor='#4a69bd' btnWidth={0.8} />
             <View style={{ display: 'flex', flexDirection: 'row', marginTop: 60 }}>
                 <Text style={{ fontSize: 14 }}>Don't have an Account?</Text>
-                <Text onPress={()=>navigation.navigate("SignUp")} style={{ marginLeft: 5, color: '#eb2f06', fontWeight: 'bolder', fontSize: 14 }}>Sign Up</Text>
+                <Text onPress={() => navigation.navigate("SignUp")} style={{ marginLeft: 5, color: '#eb2f06', fontWeight: 'bolder', fontSize: 14 }}>Sign Up</Text>
             </View>
         </View>
     )
