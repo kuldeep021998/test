@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { StyleSheet, Dimensions, View } from "react-native";
-import Input from "../uicomponent/Input.";
+import Input from "../uicomponent/Input";
 import AppButton from "../uicomponent/AppButton";
 import { Text } from "react-native";
 
@@ -55,7 +55,7 @@ export default function Login({navigation}) {
             <AppButton style={{ marginTop: 10 }} onPress={handleClick} buttonText={'Login'} bgColor='#e67e22' btnWidth={0.8} />
             <Text style={{ fontSize: 14, marginTop: 20 }}>Forgot your password?</Text>
             <Text style={{ fontSize: 14, marginTop: 30 }}>or Login With</Text>
-            <AppButton buttonText={'Login with Facebook'} bgColor='#4a69bd' btnWidth={0.8} />
+            <AppButton onPress={() => navigation.navigate("Home")} buttonText={'Login with Facebook'} bgColor='#4a69bd' btnWidth={0.8} />
             <AppButton style={{ marginTop: 10 }} onPress={handleClick} buttonText={'Login with Google'} bgColor='#4a69bd' btnWidth={0.8} />
             <View style={{ display: 'flex', flexDirection: 'row', marginTop: 60 }}>
                 <Text style={{ fontSize: 14 }}>Don't have an Account?</Text>

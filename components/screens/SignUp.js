@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { StyleSheet, Dimensions, View } from "react-native";
-import Input from "../uicomponent/Input.";
+import Input from "../uicomponent/Input";
 import AppButton from "../uicomponent/AppButton";
 import { Text } from "react-native";
 
