@@ -42,7 +42,7 @@ export default function SignUp({navigation}) {
 
 
     return (
-        <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 10 }}>
+        <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 50 }}>
             <Text style={{ fontSize: 25 }}>Sign Up</Text>
             <Text style={{ fontSize: 14, marginTop: 10 }}>Add your details to Sign up</Text>
             <Input error={error.mobileEmail} onFocus={() => handleErrors(null, "mobileEmail")} onChangeText={(txt) => handleValues(txt, 'mobileEmail')} placeholder="Name" />
@@ -52,10 +52,6 @@ export default function SignUp({navigation}) {
             <Input error={error.mobileEmail} onFocus={() => handleErrors(null, "mobileEmail")} onChangeText={(txt) => handleValues(txt, 'mobileEmail')} placeholder="Password" />
             <Input error={error.mobileEmail} onFocus={() => handleErrors(null, "mobileEmail")} onChangeText={(txt) => handleValues(txt, 'mobileEmail')} placeholder="Confirm Password" />
             <AppButton onPress={handleClick} buttonText={'Sign up'} bgColor='#FC6011' btnWidth={0.8} />
-            <View style={{ display: 'flex', flexDirection: 'row', marginTop: 40 }}>
-                <Text style={{ fontSize: 14 }}>Don't have an Account?</Text>
-                <Text style={{ marginLeft: 5, color: '#fc6011', fontWeight: 'bolder', fontSize: 14 }}>Sign Up</Text>
-            </View>
         </View>
     )
 }

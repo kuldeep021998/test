@@ -47,19 +47,19 @@ export default function Login({ navigation }) {
     }
 
     return (
-        <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 10 }}>
+        <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 50 }}>
             <Text style={{ fontSize: 25 }}>Login</Text>
             <Text style={{ fontSize: 14, marginTop: 10 }}>Add your details to login</Text>
             <Input error={error.mobileEmail} onFocus={() => handleErrors(null, "mobileEmail")} onChangeText={(txt) => handleValues(txt, 'mobileEmail')} placeholder="Your Email" />
             <Input error={error.password} setValue={setPassword} placeholder="Password" />
-            <AppButton style={{ marginTop: 10 }} onPress={handleClick} buttonText={'Login'} bgColor='#e67e22' btnWidth={0.8} />
-            <Text style={{ fontSize: 14, marginTop: 20 }}>Forgot your password?</Text>
+            <AppButton style={{ marginTop: 10 }} onPress={()=>navigation.navigate("Home")} buttonText={'Login'} bgColor='#e67e22' btnWidth={0.8} />
+            <Text onPress={()=>navigation.navigate("Reset")} style={{ fontSize: 14, marginTop: 20 }}>Forgot your password?</Text>
             <Text style={{ fontSize: 14, marginTop: 30 }}>or Login With</Text>
             <AppButton onPress={() => navigation.navigate("Home")} buttonText={'Login with Facebook'} bgColor='#4a69bd' btnWidth={0.8} />
             <AppButton style={{ marginTop: 10 }} onPress={handleClick} buttonText={'Login with Google'} bgColor='#4a69bd' btnWidth={0.8} />
             <View style={{ display: 'flex', flexDirection: 'row', marginTop: 60 }}>
                 <Text style={{ fontSize: 14 }}>Don't have an Account?</Text>
-                <Text onPress={() => navigation.navigate("SignUp")} style={{ marginLeft: 5, color: '#eb2f06', fontWeight: 'bolder', fontSize: 14 }}>Sign Up</Text>
+                <Text onPress={() => navigation.navigate("SignUp")} style={{ marginLeft: 5, color: '#eb2f06', fontWeight: 500, fontSize: 14 }}>Sign Up</Text>
             </View>
         </View>
     )
