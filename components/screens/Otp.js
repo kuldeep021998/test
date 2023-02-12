@@ -1,8 +1,6 @@
 import { View, Text, Dimensions, StyleSheet } from "react-native";
-import Input from "../uicomponent/Input";
 import AppButton from "../uicomponent/AppButton";
 import OTPTextInput from "react-native-otp-textinput";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 const { height, width } = Dimensions.get("window");
 import { useState } from "react";
 
@@ -23,7 +21,7 @@ export default function Otp({ navigation }) {
             <View style={{ margin: height * 0.02 }}>
                 <OTPTextInput inputCount={4} keyboardtype="phone-pad" />
             </View>
-            <AppButton buttonText={'Reset'} bgColor='#4a69bd' btnWidth={0.8} />
+            <AppButton onPress={()=>navigation.navigate("NewPassword")} buttonText={'Continue'} bgColor='#4a69bd' btnWidth={0.8} />
             <View style={{ display: 'flex', flexDirection: 'row', margin: height * 0.05 }}>
                 <Text>Didn't Receive?</Text>
                 <Text style={{ marginLeft: height * 0.01, color: 'orange', fontWeight: 800 }}>Click Here</Text>

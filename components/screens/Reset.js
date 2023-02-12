@@ -11,7 +11,7 @@ export default function Reset({ navigation }) {
             <Text>Please enter your email to receive a</Text>
             <Text style={{marginBottom: 50}}>link to create a new password via email</Text>
             <Input placeholder="Your Email" />
-            <AppButton buttonText={'Reset'} bgColor='#4a69bd' btnWidth={0.8} />
+            <AppButton onPress={()=>navigation.navigate("Otp")} buttonText={'Reset'} bgColor='#4a69bd' btnWidth={0.8} />
         </View>
     )
 }

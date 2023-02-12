@@ -6,10 +6,14 @@ import NewPassword from "../screens/NewPassword";
 import Feature from "../screens/Feature";
 import Login from "../screens/Login";
 import SignUp from "../screens/SignUp";
+import Menu from "../screens/Menu";
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from "@react-navigation/drawer";
 import { Dimensions, View, Image, Text } from "react-native";
 import MCI from "react-native-vector-icons/MaterialCommunityIcons";
+import Offers from "../screens/Offers";
+import NavigationRouter from "./NavigationRouter";
+import Maps from "../screens/Maps";
 
 const { height, width } = Dimensions.get("window");
 
@@ -21,7 +25,7 @@ export default function RootNavigation() {
     const ProjectDrawer = () => {
         return (
             <Drawer.Navigator drawerContent={(props) => <CustomDrawer {...props} />}>
-                <Drawer.Screen name="Home" component={Home} />
+                <Drawer.Screen name="Home" component={NavigationRouter} />
             </Drawer.Navigator>
         )
     }
@@ -58,9 +62,11 @@ export default function RootNavigation() {
             <Stack.Screen name="Home" component={ProjectDrawer} options={{ headerShown: false }} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="Reset" component={Reset} />
-            <Stack.Screen name="Feature" component={Feature} />
             <Stack.Screen name="Otp" component={Otp} />
             <Stack.Screen name="NewPassword" component={NewPassword} />
+            <Stack.Screen name="Feature" component={Feature} />
+            <Stack.Screen name="Maps" component={Maps} />
+
         </Stack.Navigator>
     )
 }
